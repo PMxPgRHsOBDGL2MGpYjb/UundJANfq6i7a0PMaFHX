@@ -1,0 +1,36 @@
+@startuml
+!define Page(x) "<color:red><size:14>x</size></color>"
+!define Action(x) "<color:blue><size:12>x</size></color>"
+
+(*) --> Page("Main contest page")
+Page("Main contest page") --> "User is registered\n(has cookie)"
+"User is registered\n(has cookie)" --> Page("Registered page")
+Page("Main contest page") --> "User not registered"
+If "Order is valid and\nprize is chosen and\nagreed with terms" then
+--> [Yes] Action('put cookie & save to db')
+--> Page("Registered page")
+else
+--> Action('show error')
+Endif
+--> Page("Main contest page")
+
+Page("Registered page") --> Action('check cookie with db')
+If "cookie ok && db ok"
+--> [Yes] Action('get data from database')
+If data OK
+--> "Display page"
+else
+endif
+
+else
+--> [No] Action("delete cookie if exists & show error")
+Action("delete cookie if exists & show error") --> Page("Main contest page")
+Endif
+
+"Display page" --> Action("Change prize")
+"Display page" --> Action("Connect with Amazon")
+"Display page" --> Action("Connect on FB Messenger")
+"Display page" --> Action("Send to friends")
+"Display page" --> Action("Share on Facebook")
+
+@enduml

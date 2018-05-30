@@ -1,0 +1,13 @@
+{
+    "name": "lucian/contest",
+    "description": "An Amazon Contest manager",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Lucy Vee",
+            "email": "lucy@lucyvee.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
