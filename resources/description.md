@@ -1,6 +1,6 @@
-#The contest manager
+# The contest manager
 
-##Preamble
+## Preamble
 
 The contest manager is a tiny web app which will allow customers of a certain brand to register to a contest using their order ID and enter the chance to win one prize.
 
@@ -13,7 +13,7 @@ The customer will be able to do extra actions for extra chances
 When the contest closes there winner will be drawn using random.org after a specified number of days (to avoid returns)
 
 
-##Design
+## Design
 
 The wireframes are located at:
 1. The main contest page (registration and details): https://wireframe.cc/9qEioH
@@ -32,7 +32,7 @@ The design must include success, error and info style messages
 The design must be built with a css framework in mind (eg. Bootstrap) to avoid complications when converting to HTML
 
 
-##Frontend Functionality
+## Frontend Functionality
 
 1. The main contest page
     1. Will be displayed if no login cookie is presend
@@ -66,4 +66,4 @@ Pages containing text will be present for
 Logic for the frontend functionality
 ![](LogicMaps/contest_page_flow.png)
 
-##Backend Functionality
+## Backend Functionality
