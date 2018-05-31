@@ -1,0 +1,100 @@
+@startuml
+skinparam dpi 300
+!define Table(name,desc) class name as "desc" << (T,#FFAAAA) >>
+' we use bold for primary key
+' green color for unique
+' and underscore for not_null
+!define primary_key(x) <b>x</b>
+!define unique(x) <color:green>x</color>
+!define not_null(x) <u>x</u>
+hide methods
+hide stereotypes
+
+' Entities
+
+Table(admins, "admins") {
+    primary_key(id) BIGINT[20]
+    name VARCHAR[255]
+    email VARCHAR[255]
+    password VARCHAR[40]
+}
+
+Table(contests, "contests\n(Created contests)") {
+    primary_key(id) BIGINT[20]
+    not_null(admin_id) BIGINT[20]
+    not_null(name) VARCHAR[255]
+    not_null(start_date) DATETIME
+    not_null(end_date) DATETIME
+    not_null(draw_date) DATETIME
+    is_started BOOLEAN
+    is_ended BOOLEAN
+    is_drawn BOOLEAN
+    winner_id BIGINT[20]
+    tos LONGTEXT
+    rules LONGTEXT
+}
+
+Table(entries, 'entries\n(valid entries)') {
+    primary_key(id) BIGINT[20]
+    not_null(contest_id)
+    not_null(order_id) STRING[32]
+    not_null(prize_id) BIGINT[20]
+    not_null(points) INTEGER[9]
+    recommended_by_id BIGINT[20]
+}
+
+Table(prizes, 'prizes') {
+    primary_key(id) BIGINT[20]
+    not_null(contest_id) BIGINT[20]
+    not_null(title) STRING[255]
+    not_null(description) TEXT
+    not_null(image_1) STRING[255]
+    image_2 STRING[255]
+    image_3 STRING[255]
+    not_null(amazon_url) STRING[255]
+    not_null(price) DECIMAL[6,2]
+    is_main BOOLEAN
+    count SMALLINT[3]
+}
+
+
+Table(entry_actions, 'entry_actions\n(Done actions for points)') {
+    primary_key(id) BIGINT[20]
+    not_null(entry_id) BIGINT[20]
+    not_null(actions_contest_id) BIGINT[20]
+    action_data TEXT
+}
+
+
+Table(actions_contests, 'actions_contests\n(Actions available in contest)') {
+    primary_key(id) BIGINT[20]
+    not_null(action_id) BIGINT[20]
+    not_null(contest_id) BIGINT[20]
+    not_null(points)
+    config TEXT
+}
+
+Table(actions, 'actions\n(List of available actions\nfor contests)') {
+    primary_key(id) BIGINT[20]
+    unique(name) BIGINT[20]
+    config_template TEXT
+    default_max INTEGER[3]
+}
+
+
+' Relations
+
+admins "1" --> "n" contests
+contests "1" --> "n" entries
+contests "1" --> "1" entries
+contests "1" --> "n" prizes
+entries "1" --> "1" prizes
+entries "1" --> "n" entries
+entries "1" --> "n" entry_actions
+contests "1" --> "n" actions_contests
+actions "1" --> "n" actions_contests
+
+entry_actions "n" --> "1" actions_contests
+
+
+@enduml

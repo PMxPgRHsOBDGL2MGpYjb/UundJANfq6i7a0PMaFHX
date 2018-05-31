@@ -16,6 +16,7 @@ When the contest closes there winner will be drawn using random.org after a spec
 ## Design
 
 The wireframes are located at:
+
 1. The main contest page (registration and details): https://wireframe.cc/9qEioH
 2. The joined page: https://wireframe.cc/9qEioH
 3. There will be three more pages containing texts:
@@ -59,11 +60,55 @@ The design must be built with a css framework in mind (eg. Bootstrap) to avoid c
     4. Countdown until contest is over
 
 Pages containing text will be present for
+
 1. Rules
 2. Terms and Conditions
 3. Privacy policy
 
-Logic for the frontend functionality
+### Logic for the frontend functionality
+
 ![](LogicMaps/contest_page_flow.png)
 
 ## Backend Functionality
+
+### Database structure
+
+![](LogicMaps/database.png)
+
+### How it works
+
+1. Admins will be added manually to the database `db:admins`
+2. There will be a login page
+3. After login an admin will be able to create a contest 
+4. Actions `db:actions` will be added manually to the database
+5. The creation of the contest will have the following inputs
+    1. Contest `db:contests`
+        1. Name
+        2. Start date
+        3. End date
+        4. Draw date
+        5. Terms and conditions (templates will be provided)
+        5. Rules (templates will be provided)
+    2. Prizes `db:prizes`
+        1. Add one or more main prizes
+            1. Entrants will be able to choose from one of the main prizes
+        2. Add one or more secondary prizes
+        3. Fields for the prizes
+            1. Name
+            2. Description
+            3. Images
+            4. Amazon URL
+            5. Price
+            6. If the prize is main or secondary
+            7. Prize count
+    3. Actions `db:actions_contests` - The user will choose from default actions
+        1. Default actions:
+            1. Connect with Amazon
+            2. Connect with Facebook
+            3. Connect on Messenger
+            4. Send to friends
+            5. Share on facebook
+            6. Tweet this
+        2. For almost each action the user will have to input some info (default share message, etc.)
+        3. For each chosen action from `db:actions` the admin will have to input the number of points the entrant will get for completing the action
+         

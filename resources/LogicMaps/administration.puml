@@ -1,0 +1,22 @@
+@startuml
+salt
+
+{+
+
+    {+
+        Contest Manager                                                                                            Logout
+    }
+    {
+        [+ Add a contest]
+    }
+    {#
+        ID  | Name                  | Start                     | End               | Draw              | Winner        | Prize                 | Options
+        1   | My very first contest | Yesterday, 18:00          | In about a month  | 30 days after end | Sarah Palin   | Baby crib             | <&pencil> <&trash> <&eye>
+        2   | My Second contest     | Tomorrow, 18:00 <&clock>  | In about a month  | 30 days after end | John Galliano | Cesare Paciotti shoes | <&pencil> <&trash> <&eye>
+    }
+    .                                                                footer
+}
+
+
+
+@enduml

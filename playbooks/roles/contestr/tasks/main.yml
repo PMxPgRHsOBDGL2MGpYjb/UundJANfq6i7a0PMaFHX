@@ -1,0 +1,73 @@
+- name: install packages for contestr
+  apt: name={{ item }} state=present
+  with_items:
+    - libmysqlclient-dev
+    - python-pip
+    - composer
+    - nodejs
+
+- name: Upgrade pip
+  command: pip install --upgrade pip
+
+- name: Upgrade npm
+  command: npm install -g npm
+
+- name: Install the Python MySQLB module
+  pip: name=MySQL-python
+
+- name: Create a new database with name 'contestr'
+  mysql_db:
+    name: contestr
+    state: present
+    login_user: homestead
+    login_password: secret
+
+- name: copy nginx site conf
+  copy:
+    src: nginx_site
+    dest: /etc/nginx/sites-available/contestr.conf
+    owner: root
+    group: root
+    mode: 0644
+
+- name: enable site on nginx
+  file:
+    src: /etc/nginx/sites-available/contestr.conf
+    dest: /etc/nginx/sites-enabled/contestr.conf
+    state: link
+
+- name: restart nginx
+  service:
+    name: nginx
+    state: restarted
+
+- name: Composer install
+  command: composer install
+  args:
+    chdir: /contestr
+
+- name: artisan key
+  command: php artisan key:generate
+  args:
+    chdir: /contestr
+
+- name: artisan migration
+  command: php artisan migrate
+  args:
+    chdir: /contestr
+
+- name: artisan seed
+  command: php artisan db:seed
+  args:
+    chdir: /contestr
+
+- name: artisan storage
+  command: php artisan storage:link
+  args:
+    chdir: /contestr
+
+- name:
+  command: npm install
+  args:
+    chdir: /contestr
+

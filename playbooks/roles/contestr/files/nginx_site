@@ -1,0 +1,55 @@
+server {
+	listen 80;
+	server_name contestr.test .contestr.test;
+
+	root /contestr/public;
+
+	index index.html index.htm index.php;
+
+    location ~ \.php$ {
+        index index.html index.htm index.php;
+        try_files $uri =404;
+        fastcgi_pass unix:/run/php/php7.2-fpm.sock;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+        fastcgi_intercept_errors on;
+        fastcgi_read_timeout 7200;
+    }
+
+	# NO LOG FOR favicon.ico
+	location = /favicon.ico {
+		log_not_found off;
+		access_log off;
+	}
+
+	# NO LOG FOR robots.txt
+	location = /robots.txt {
+		allow all;
+		log_not_found off;
+		access_log off;
+	}
+
+    set $subdomain "";
+	if ($host ~* "^(.+)\.contestr.test") {
+	    set $subdomain $1;
+	}
+
+
+	if (-f $request_filename) {
+		break;
+	}
+
+	if (!-f $request_filename) {
+		rewrite ^/(.+)$ /index.php?url=$1&subdomain=$subdomain last;
+		break;
+	}
+
+
+    fastcgi_buffers 16 16k;
+    fastcgi_buffer_size 32k;
+    client_max_body_size 1000m;
+    client_body_buffer_size 10K;
+    client_header_buffer_size 1k;
+    large_client_header_buffers 4 16k;
+}
