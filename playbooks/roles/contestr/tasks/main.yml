@@ -5,6 +5,7 @@
     - python-pip
     - composer
     - nodejs
+    - htop
 
 - name: Upgrade pip
   command: pip install --upgrade pip
@@ -66,7 +67,7 @@
   args:
     chdir: /contestr
 
-- name:
+- name: install npm why?
   command: npm install
   args:
     chdir: /contestr

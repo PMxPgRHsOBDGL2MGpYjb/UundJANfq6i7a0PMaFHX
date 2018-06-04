@@ -17,6 +17,8 @@ Route::get('files/{id}/download','Front\\FileController@fileDownload')->name('fr
 
 Auth::routes();
 
+Route::get('/contest/{id}', 'Front\\ContestController@deliverContest');
+
 // NOTE:
 // remove the demo middleware before you start on a project, this middleware if only
 // for demo purpose to prevent viewers to modify data on a live demo site
