@@ -11,13 +11,21 @@
 |
 */
 
+Route::domain('test{id}.contestr.test')->group(function ($id) {
+    
+    Route::get('/', function($id) {
+        $app = app();
+        $controller = $app->make('App\\Http\\Controllers\\Front\\ContestController');
+        return $controller->callAction('deliverContest', $parameters = array('id' => $id));
+    });
+    
+});
+
 Route::get('/','Front\\HomeController@index')->name('front.home');
 Route::get('files/{id}/preview','Front\\FileController@filePreview')->name('front.file.preview');
 Route::get('files/{id}/download','Front\\FileController@fileDownload')->name('front.file.download');
 
 Auth::routes();
-
-Route::get('/contest/{id}', 'Front\\ContestController@deliverContest');
 
 // NOTE:
 // remove the demo middleware before you start on a project, this middleware if only

@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+a,
+a:hover {
+    transition: color 250ms;
+    text-decoration: none;
+}
+.btn{
+    transition: .4s ease;
+}
+.btn-default{
+    background: transparent;
+    border-radius:21px;
+    border-width: 1px;
+    border-color: rgb(54, 54, 54);
+    border-style: solid;
+}
+.btn-default:hover{
+    border-color: rgb(54, 54, 54);
+    background: rgb(54, 54, 54); 
+    color:#fff
+}
+.btn-danger{
+    background-image: -moz-linear-gradient( 0deg, rgb(255,145,249) 0%, rgb(255,80,245) 100%);
+  background-image: -webkit-linear-gradient( 0deg, rgb(255,145,249) 0%, rgb(255,80,245) 100%);
+  background-image: -ms-linear-gradient( 0deg, rgb(255,145,249) 0%, rgb(255,80,245) 100%);
+  box-shadow: -0.157px 2.996px 8.91px 0.09px rgba(130, 130, 130, 0.3);
+  border-color:transparent;
+  border-radius:21px;
+}
+.btn-danger:hover{
+    border-color: rgb(54, 54, 54);
+    background: rgb(54, 54, 54); 
+    color:#fff
+}
+body{
+    font-family: 'Raleway', sans-serif;
+    background: #fff
+}
+
+/**** header style  ******/
+
+header{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0.837px -15.978px 48.45px 2.55px rgba(0, 0, 0, 0.20);
+    padding-top:10px;
+}
+header ul li{
+    display: inline-block;
+    list-style-type: none;
+    list-style: none;
+    line-height:40px;
+    margin-left: 40px
+}
+header li a{
+    color: rgb(54, 54, 54);
+    font-size: 14px;
+}
+
+/***** win style ******/
+.win{
+    padding-top: 50px;
+
+}
+.win .col-md-3{
+    float: right;
+}
+.win .col-md-8{
+    float: left;
+    padding-top:15px
+}
+.win h3{
+font-size: 30px;
+  color: rgb(54, 54, 54);
+  font-weight: 600;
+  padding:15px
+}
+.win .choose{
+    margin-top:25px;
+    padding-bottom: 30px
+}
+.win .ex .choose{
+    padding-bottom: 0px 
+}
+.win .choose .inner{
+    margin-top:15px
+}
+.win .prag{
+    font-size: 18px;
+    color: rgb(54, 54, 54);
+    padding-left: 35px
+}
+.win  .prag img{
+    margin-right: 15px
+}
+.win .choose .inner p{
+font-size: 14px;
+    color: rgb(54, 54, 54);
+    line-height: 2.143;
+    padding-right: 20px;
+    margin-bottom: 30px
+}
+.win .choose .inner .btn{
+font-size: 12px;
+padding:10px 30px 7px 30px;
+margin-right: 30px
+}
+.win .carousel-inner>.item> img{
+    margin-left: auto;
+    margin-right: auto
+}
+.win .carousel-indicators{
+    bottom: -50px;
+}
+.win .carousel-indicators li{
+    border:1px solid rgba(54, 54, 54,.42);
+    margin:1px 5px;
+}
+.win .carousel-indicators .active{
+    width:10px;
+    height: 10px;
+    margin:1px 5px;
+    border-color:rgb(255, 84, 246)
+}
+.win .order-id{
+padding-top:60px;
+margin:0;
+text-align: center;
+}
+
+.win .order-id h2{
+    text-align: left;
+    color: rgb(54, 54, 54);
+    font-size: 30px;
+    margin-bottom: 40px
+}
+.win .order-id .form-control{
+    border-color: rgb(188, 188, 188);   
+    border-radius: 30px;
+    height:50px;
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 5px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 30px
+}
+.win .order-id .form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: rgb(255, 84, 246);
+  }
+  .win .order-id .form-control::-moz-placeholder { /* Firefox 19+ */
+    color: rgb(255, 84, 246);
+  }
+  .win .order-id .form-control:-ms-input-placeholder { /* IE 10+ */
+    color: rgb(255, 84, 246);
+  }
+  .win .order-id .form-control:-moz-placeholder { /* Firefox 18- */
+    color: rgb(255, 84, 246);
+  }
+  .win .order-id .btn{
+      font-size:14px;
+      color: rgb(255, 255, 255);
+    line-height:40px;
+    text-align: center;
+    width:300px;
+    letter-spacing:2px;
+  }
+  
+  /***** how it work style *****/
+
+  .how-work {
+      padding-top:60px;
+      padding-bottom: 30px;
+      text-align:center
+  }
+  .how-work h2{
+font-size: 30px;
+color: rgb(54, 54, 54);
+    font-weight:600;
+    margin-bottom: 60px;
+    text-align: left
+  }
+  .how-work img{
+      margin-top: 20px;
+      margin-bottom: 20px
+  }
+  .how-work h3{
+font-size: 16px;color: rgb(54, 54, 54);
+  font-weight: bold;
+  margin-bottom: 30px
+  }
+  .how-work p{
+      font-size: 14px;
+    color: rgb(54, 54, 54);
+    line-height: 2;
+    padding:10px 10px
+  }
+  .how-work .text-center{
+      padding-top:40px;
+      padding-bottom: 30px
+  }
+  .how-work .text-center .btn{
+  text-transform: uppercase;
+  padding:10px 30px 7px 30px;
+  font-weight: 600
+  }
+
+  /**** more-info style ******/
+
+  .more-info{
+      padding-top:30px;
+      padding-bottom: 50px
+  }
+  .more-info h3{
+    font-size: 30px;
+    color: rgb(54, 54, 54);
+        font-weight:600;
+        margin-bottom: 60px;
+        text-align: left
+  }
+  .more-info .img-responsive{
+      width: 100%;
+      
+  }
+  .more-info h4{
+    font-weight: bold;
+    font-size: 13px;
+    margin-top:0;
+    line-height: 20px
+  }
+  .img-div{
+      padding-right: 0
+  }
+  .more-info p{
+      font-size: 13px;
+
+  }
+  .more-info .btn{
+      margin-top: 30px;
+      border-color: rgb(250, 146, 59);
+font-size: 12px;
+   padding-left: 20px;
+   padding-right: 20px
+  }
+  .more-info .btn:hover{
+      background-color:transparent;
+      color:rgb(54, 54, 54);
+      box-shadow: -0.157px 2.996px 8.91px 0.09px rgba(130, 130, 130, 0.3);
+      border-color: rgba(54, 54, 54,0.4)
+  }
+  .more-info button.btn{
+      border-color: rgb(54, 54, 54);
+      margin-top: 20px
+  }
+  .more-info button.btn:hover{
+      background: rgb(54, 54, 54);
+      color:#fff
+  }
+  /***** footer style *****/
+
+footer{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0.837px -15.978px 48.45px 2.55px rgba(0, 0, 0, 0.15);  
+    padding-top:20px;
+    padding-bottom: 20px;
+    line-height: 45px
+}  
+  footer ul li{
+    display: inline-block;
+    list-style-type: none;
+    list-style: none;
+  }
+  footer ul li a{
+    color:rgb(54, 54, 54);
+    margin-right: 30px  
+  }
+/***** product details style ****/
+.product{
+    padding-top:60px;
+    padding-bottom: 40px
+}
+.product h2{
+    color:#ff35ca;
+    font-weight: 800;
+    line-height:1.5;
+    font-size: 30px;
+}
+.product h3{
+font-size: 30px;
+line-height:1.5;
+color:rgb(54, 54, 54);
+margin-bottom: 30px
+}
+.product h3 b{
+    font-weight: 800
+}
+ .product h4{
+font-size: 24px;
+color: rgb(54, 54, 54);
+margin-bottom:40px
+ } 
+ .product p{
+    line-height: 2.143;
+
+ }
+
+ .product .win-prag{
+ font-size: 18px;
+ margin-bottom: 30px
+ }
+ .product .win-img img{
+     max-height: 218px;
+     margin:30px 40px 30px
+ }
+.product .win-step{
+    width: 100%;
+    float: left;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+.product .win-step .fa{
+    margin-right: 20px;
+    color:rgba(54, 54, 54,.22)
+}
+.product .win-step.done .fa{
+    color:#46ff83
+}
+.product .win-step p{
+    padding-left:50px;
+    font-size: 12px
+}
+.product .win-step .btn{
+    padding: 5px 30px 3px 30px;
+    text-transform: uppercase;
+}
+/**** checkbox *****/
+.checkbox{
+    padding-left: 15px
+}
+.styled-checkbox {
+    position: absolute;
+    opacity: 0;
+  }
+  .styled-checkbox + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+  }
+  .styled-checkbox + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border:2px solid rgb(54, 54, 54)
+  }
+  .styled-checkbox:hover + label:before {
+    background:rgb(54, 54, 54)
+
+  }
+  .styled-checkbox:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+  .styled-checkbox:checked + label:before {
+    background:rgb(54, 54, 54)
+  }
+  .styled-checkbox:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+  .styled-checkbox:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
+  .styled-checkbox:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+
+  /*** popup style *****/
+  .modal{
+      font-family: 'Raleway', sans-serif;
+      padding-top:7%;
+  }
+  .modal .modal-content{
+    background-color:rgb(54, 54, 54);
+        padding: 2% 4%;
+        border-radius: 0;
+        color:#fff;
+        
+   }
+   .modal h4{
+       text-transform: uppercase;
+       border-bottom: 2px solid rgba(255,255,255,0.15);
+       padding-bottom: 15px;
+       font-size: 26px
+   }
+   .modal .modal-header {
+   min-height: 0;
+   padding: 0;
+   border-bottom:0;
+}
+.modal .form-group{
+    margin-top:30px
+}
+.modal .modal-header button{
+    color:#fff;
+    font-size: 20px;
+    opacity: 1;
+   }
+   
+.modal .form-control{
+    background: transparent;
+    border-radius: 21px
+}
+.modal label{
+  padding-left: 10px;
+  font-weight: 300
+}
+.modal .btn-default{
+    background: #fff;
+    width: 100%;
+    color:rgb(54, 54, 54);
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-top:20px;
+    margin-bottom: 30px
+}
+.modal .modal-header button{
+    background: transparent;
+    border: 0;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+  }
+  .modal .modal-header img{
+    width:25px   ;
+    opacity:1;
+  }
+
+  /******** slider ********/
+  /* Slideshow container */
+.slideshow-container {
+    width:100%;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    color: rgb(54, 54, 54);
+    font-weight: bold;
+    font-size: 28px;
+    transition: 0.6s ease;
+    user-select: none;
+  }
+  .mySlides1 .row{
+      margin:0;
+      padding-left:30px
+  }
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+  }
+  
+  /* On hover, add a grey background color */
+  .prev:hover, .next:hover {
+    color: black;
+  }
+/***** media query *****/
+@media (min-width: 768px){
+.modal-sm {
+    width: 400px;
+}
+}
+  @media(max-width:991px){
+    .win .choose .inner .btn {
+        font-size: 12px;
+        padding: 10px 15px 7px 15px;
+        margin-right: 10px;
+        margin-bottom: 10px
+    }
+    .win .choose .inner p{
+        padding-right: 0
+    }
+    .how-work .col-sm-6 {
+        height: 300px;
+    }
+    .more-info .img-responsive{
+        margin-bottom: 10px
+    }
+    .product .win-img {
+        text-align: center
+    }
+    .product .win-img img {
+        max-height: 218px;
+        margin: 30px 10px;
+    }
+    .product .win-step .btn {
+        padding: 5px 15px 3px 15px;
+    }
+    .img-div {
+        padding-right: 15px;
+    }
+    .win  .prag img{
+        margin-left: -50px
+    }
+  }
+
+  @media(max-width:767px){
+    .win .col-md-3{
+        float: none;
+    }
+    .row{margin:0}
+    .more-info .btn{margin-bottom: 20px;margin-left: 15px}
+    .more-info button.btn{
+        margin-top:0;
+        display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    footer{padding-bottom: 0px}
+    .more-info .img-responsive {
+        margin-bottom: 10px;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .win .order-id .form-control{
+        font-size: 14px
+    }
+    .more-info .col-sm-4{text-align: center}
+    .how-work .col-sm-6{height:auto}
+    .product .win-step .btn {
+        padding: 5px 30px 3px 30px;
+    }
+    .product h3{
+        font-size:20px
+    }
+    .mySlides1 .win .prag{
+        margin-bottom: 35px
+    }
+    .win .choose .inner p{
+        font-size: 12px;
+        margin-top:45px
+    }
+  }
+  @media(max-width:500px){
+      header .pull-right{
+          padding-left: 0
+      }
+      .win h3,.win .order-id h2,.how-work h2,.more-info h3{font-size: 20px}
+      header{
+          text-align: center
+      }
+      header ul{
+          width:100%;
+
+      }
+      .win .order-id .btn{width:260px}
+
+  }
+  @media(max-width:400px){
+      footer{
+        text-align: center;
+        padding-top:10px
+      }
+  footer p{
+      width:100%;
+      margin-bottom: 0
+  }
+  }

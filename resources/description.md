@@ -13,7 +13,7 @@ The customer will be able to do extra actions for extra chances
 When the contest closes there winner will be drawn using random.org after a specified number of days (to avoid returns)
 
 
-## Design
+## Design - This is done
 
 The wireframes are located at:
 
@@ -36,8 +36,8 @@ The design must be built with a css framework in mind (eg. Bootstrap) to avoid c
 ## Frontend Functionality
 
 1. The main contest page
-    1. Will be displayed if no login cookie is presend
-    2. Loging cookie is the actual order ID
+    1. Will be displayed if no login cookie is present
+    2. Login cookie is the actual order ID
     3. If the Order ID is valid (calls an api, always valid for dev puproses) and a prize is chosen then
         1. If the order id is in the database the cookie is set
             1. Redirect to the registered page
